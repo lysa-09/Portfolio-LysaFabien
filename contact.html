@@ -6,13 +6,15 @@
     <title>Contact - Lysa Fabien</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon.png?v=1">
+<link rel="apple-touch-icon" href="favicon.png">
 </head>
 <body class="page-contact">
 
     <header id="main-header" class="header-visible">
-        <div class="logo">
-            <img src="Logo rose.png" alt="logo">
-        </div>
+        <a href="index.html" id="logo-retour" class="logo">
+    <img src="Logo rose.png" alt="logo retour">
+</a>
         <nav>
             <a href="index.html">Accueil</a>
             <a href="apropos.html">À propos</a>
@@ -73,5 +75,61 @@
     </footer>
 
     <script src="script.js"></script>
+    
 </body>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const logo = document.getElementById('logo-retour');
+    
+    if (logo) {
+        logo.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = this.getAttribute('href');
+
+            // 1. Création immédiate de l'écran blanc
+            const bg = document.createElement('div');
+            Object.assign(bg.style, {
+                position: 'fixed', top: '0', left: '0', width: '100vw', height: '100vh',
+                backgroundColor: 'white', zIndex: '999999', opacity: '0',
+                transition: 'opacity 0.4s ease'
+            });
+            document.body.appendChild(bg);
+
+            // 2. Création du logo voyageur
+            const rect = this.getBoundingClientRect();
+            const clone = document.createElement('img');
+            clone.src = this.querySelector('img').src;
+            Object.assign(clone.style, {
+                position: 'fixed', zIndex: '1000000',
+                top: rect.top + 'px', left: rect.left + 'px',
+                width: rect.width + 'px', height: 'auto',
+                transition: 'all 1.2s cubic-bezier(0.4, 0, 0.2, 1)'
+            });
+            document.body.appendChild(clone);
+
+            // 3. Masquer le contenu de la page contact
+            this.style.opacity = '0';
+            const main = document.querySelector('main');
+            if(main) main.style.opacity = '0';
+
+            // 4. Animation
+            setTimeout(() => {
+                bg.style.opacity = '1';
+                
+                const moveX = (window.innerWidth / 2) - (rect.left + rect.width / 2);
+                const moveY = (window.innerHeight / 2) - (rect.top + rect.height / 2);
+                
+                clone.style.transform = `translate(${moveX}px, ${moveY}px) scale(3.5)`;
+            }, 10);
+
+            // 5. Redirection
+            setTimeout(() => {
+                window.location.href = target;
+            }, 1250);
+        });
+    } else {
+        console.error("Le logo-retour n'a pas été trouvé sur cette page !");
+    }
+});
+</script>
 </html>

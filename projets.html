@@ -6,15 +6,17 @@
     <title>Mes Projets - Lysa Fabien</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
+    <link rel="icon" type="image/png" href="favicon.png?v=1">
+<link rel="apple-touch-icon" href="favicon.png">
 </head>
 <body>
 
     <div class="design-bg"></div>
 
     <header id="main-header" class="header-visible">
-        <div class="logo">
-            <img src="Logo rose.png" alt="logo">
-        </div>
+     <a href="index.html" id="logo-retour" class="logo">
+        <img src="Logo rose.png" alt="logo retour">
+    </a>
         <nav>
             <a href="index.html">Accueil</a>
             <a href="apropos.html">À propos</a>
@@ -33,13 +35,14 @@
         <div class="header-barrier"></div> 
 
         <h1 class="force-title" style="text-align: center; margin-bottom: 40px;">Mes Projets</h1>
+        <p class="main-subtitle">Découvrez une sélection de projets réalisés cette année, des défis créatifs que j’ai pris un plaisir immense à façonner.</p>
 
         <div class="projects-container">
 
             <section class="project-card reveal">
                 <div class="project-content">
                     <div class="project-tags">✨ Analyse d'image | Performance | Vidéo</div>
-                    <h2>Project 01 : Liv & Maddie</h2>
+                    <h2>Projet 01 : Liv & Maddie</h2>
                     <div class="project-description">
                         <p>Pour ce projet, mon défi a été de décoder la "mécanique Disney" afin de reproduire fidèlement le générique de la série <em>Liv & Maddie</em>. Un véritable exercice de rigueur technique.</p>
                         <p>J'ai veillé à ce que chaque plan soit le miroir exact de l'original. En basculant devant la caméra, j'ai dû incarner l'énergie de la sitcom tout en respectant une synchronisation parfaite.</p>
@@ -56,7 +59,7 @@
             <section class="project-card reveal">
                 <div class="project-content">
                     <div class="project-tags">✨ Gestion de projet | Stratégie | Simulation</div>
-                    <h2>Project 02 : Radio Campus</h2>
+                    <h2>Projet 02 : Radio Campus</h2>
                     <div class="project-description">
                         <p>Simulation de réponse à un appel d'offres. En tant que <strong>cheffe de projet</strong>, j'ai structuré l'organisation du studio, le budget et le cadre juridique (RGPD).</p>
                         <p>J'ai aussi élaboré une stratégie digitale pour Instagram et TikTok afin de capter l'audience étudiante.</p>
@@ -73,7 +76,7 @@
             <section class="project-card reveal">
                 <div class="project-content">
                     <div class="project-tags">✨ Photographie | Photoshop | Canon R50</div>
-                    <h2>Project 03 : Exploration Photo</h2>
+                    <h2>Projet 03 : Exploration Photo</h2>
                     <div class="project-description">
                         <p>Ce projet regroupe une année de pratique. J'ai expérimenté des techniques comme le <strong>Low Key</strong> et le <strong>High Key</strong> pour maîtriser la lumière.</p>
                         <p>J'ai aussi réalisé une mise en scène publicitaire (Parfum Cloud d'Ariana Grande), alliant prise de vue et retouche sur Photoshop.</p>
@@ -95,6 +98,10 @@
     <footer>
         <p>&copy; 2025 - Lysa Fabien | Portfolio Étudiant</p>
     </footer>
-
+<button id="backToTop" class="back-to-top" title="Retour en haut">
+  <svg viewBox="0 0 24 24" class="up-arrow-icon" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 4L4 12M12 4L20 12M12 4V20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</button>
 </body>
 </html>
