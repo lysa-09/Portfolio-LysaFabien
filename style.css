@@ -680,8 +680,8 @@ footer {
 /* LE CADRE PHOTO : Le rond de couleur autour */
 .photo-container {
     position: relative;
-    width: 280px; /* Taille totale du cadre */
-    height: 280px;
+    width: 220px; /* Taille totale du cadre */
+    height: 220px;
     margin-bottom: 35px;
     display: flex;
     align-items: center;
@@ -692,7 +692,7 @@ footer {
     border-radius: 50%;
     
     /* L'ESPACE VIDE : Entre le trait rose et ta photo */
-    padding: 12px; 
+    padding: 10px; 
     
     background: transparent;
     transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -861,4 +861,77 @@ header.header-visible {
         /* Sur mobile, on renforce encore le halo car l'écran est petit */
         filter: drop-shadow(0 0 15px rgba(255, 158, 135, 1)); 
     }
+}
+/* L'écran blanc de retour (identique à ton intro) */
+.intro-reverse-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #ffffff; /* Blanc pur comme ton intro */
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease-in; /* Disparition du contenu rapide */
+}
+
+.intro-reverse-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Le logo qui voyage (copie conforme du tien) */
+.logo-voyageur-final {
+    position: fixed;
+    z-index: 9999;
+    /* On utilise 1.2s car c'est la durée de ton voyage d'intro original */
+    transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1); 
+    pointer-events: none;
+}
+
+/* =========================================
+   FLÈCHE RETOUR EN HAUT
+   ========================================= */
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    
+    /* COULEUR : Fond rose transparent (effet glass) */
+    background-color: rgba(255, 158, 135, 0.15); 
+    backdrop-filter: blur(5px); /* Un léger flou */
+    
+    /* LA FLÈCHE : Plus petite et rose */
+    color: #e08a74; /* Un rose un peu plus sombre pour la visibilité */
+    font-size: 20px; /* <--- Réduit de 24px à 20px pour la finesse */
+    
+    border: 1.5px solid rgba(255, 158, 135, 0.4); /* Bordure rose fine */
+    border-radius: 50%;
+    cursor: none; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(255, 158, 135, 0.1); /* Ombre plus douce */
+    z-index: 2000;
+    
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+}
+
+#backToTop.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#backToTop:hover {
+    /* Au survol, on inverse pour que ton curseur rose agisse */
+    background-color: #FF9E87;
+    color: white;
+    transform: scale(1.1);
 }

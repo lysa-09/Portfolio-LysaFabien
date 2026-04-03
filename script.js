@@ -45,8 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Effet au survol des éléments cliquables
         // On cible toutes les classes de boutons et liens de ton site
-        const clickables = document.querySelectorAll('a, button, .dropbtn, .bubble-btn, .btn-cv-glassy, .sticker, .skill-card');
-        
+// Ajoute #backToTop à la liste ici :
+const clickables = document.querySelectorAll('a, button, .dropbtn, .bubble-btn, .btn-cv-glassy, .sticker, .skill-card, #backToTop');        
         clickables.forEach(el => {
             el.addEventListener("mouseenter", () => {
                 cursor.classList.add("hover"); // Grossit et s'inverse via CSS
@@ -130,4 +130,83 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+});
+
+const backToTop = document.getElementById("backToTop");
+
+window.onscroll = function() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        backToTop.classList.add("show");
+    } else {
+        backToTop.classList.remove("show");
+    }
+};
+
+backToTop.onclick = function() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth" // Remontée fluide, pas de saut brusque
+    });
+};
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const logoOriginal = document.getElementById('logo-retour');
+
+    if (logoOriginal) {
+        logoOriginal.addEventListener('click', function(e) {
+            e.preventDefault();
+            const destination = this.getAttribute('href');
+
+            // 1. On crée l'écran blanc UNIQUEMENT au clic
+            const voyageScreen = document.createElement('div');
+            voyageScreen.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background: white;
+                z-index: 9998;
+                opacity: 0;
+                transition: opacity 0.4s ease-out;
+            `;
+            document.body.appendChild(voyageScreen);
+
+            // 2. On clone le logo pour le voyage
+            const rect = this.getBoundingClientRect();
+            const voyageur = document.createElement('img');
+            voyageur.src = this.querySelector('img').src;
+            voyageur.style.cssText = `
+                position: fixed;
+                z-index: 9999;
+                top: ${rect.top}px;
+                left: ${rect.left}px;
+                width: ${rect.width}px;
+                height: ${rect.height}px;
+                transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+            `;
+            document.body.appendChild(voyageur);
+
+            // On cache le logo fixe du header
+            this.style.opacity = '0';
+
+            // 3. Animation
+            requestAnimationFrame(() => {
+                voyageScreen.style.opacity = '1';
+                
+                const centerX = window.innerWidth / 2;
+                const centerY = window.innerHeight / 2;
+                const moveX = centerX - (rect.left + rect.width / 2);
+                const moveY = centerY - (rect.top + rect.height / 2);
+
+                voyageur.style.transform = `translate(${moveX}px, ${moveY}px) scale(3.5)`;
+            });
+
+            // 4. Redirection
+            setTimeout(() => {
+                window.location.href = destination;
+            }, 1200);
+        });
+    }
 });
