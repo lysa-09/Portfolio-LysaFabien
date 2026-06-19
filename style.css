@@ -935,3 +935,913 @@ header.header-visible {
     color: white;
     transform: scale(1.1);
 }
+
+
+/* =========================================
+   PAGE STAGE - VERSION FINALE PROPRE
+   ========================================= */
+
+.stage-page {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+/* INTRO */
+
+.stage-hero-clean {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.stage-year {
+    color: #e08a74;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* PRÉSENTATION ENTREPRISE */
+
+.stage-company-card {
+    max-width: 950px;
+    margin: 0 auto 45px;
+    padding: 45px;
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(12px);
+    border-radius: 30px;
+    border: 2px solid white;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr;
+    gap: 35px;
+    align-items: center;
+}
+
+.stage-company-text h2,
+.stage-section-title,
+.stage-bilan-clean h2 {
+    font-family: 'Playfair Display', serif;
+    color: #FF9E87;
+    font-size: 1.9rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.stage-company-text p,
+.stage-bilan-clean p {
+    color: #555;
+    line-height: 1.8;
+    font-size: 1rem;
+    text-align: justify;
+}
+
+.stage-company-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stage-company-visual a {
+    display: inline-block;
+}
+
+.stage-logo {
+    width: 300px;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.stage-company-visual a:hover .stage-logo,
+.stage-logo:hover {
+    transform: scale(1.05);
+}
+
+/* INFOS CLÉS */
+
+.stage-keyinfos {
+    max-width: 950px;
+    margin: 0 auto 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.keyinfo {
+    background: white;
+    color: #FF9E87;
+    padding: 12px 22px;
+    border-radius: 50px;
+    font-weight: 600;
+    border: 1px solid rgba(255, 158, 135, 0.25);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
+/* SECTIONS */
+
+.stage-section,
+.stage-missions {
+    max-width: 950px;
+    margin: 0 auto 75px;
+}
+
+.stage-section-subtitle {
+    color: #555;
+    line-height: 1.8;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* MISSIONS */
+
+.stage-grid {
+    max-width: 1050px;
+    margin: 35px auto 80px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+}
+
+.stage-card {
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(12px);
+    border-radius: 32px;
+    padding: 42px 38px;
+    border: 2px solid white;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.06);
+    transition: all 0.3s ease;
+    text-align: left;
+    min-height: 520px;
+    display: flex;
+    flex-direction: column;
+}
+
+.stage-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 45px rgba(255, 158, 135, 0.2);
+}
+
+.stage-card i {
+    font-size: 2.2rem;
+    color: #FF9E87;
+    margin-bottom: 22px;
+    display: block;
+    text-align: center;
+}
+
+.stage-card h3 {
+    font-family: 'Playfair Display', serif;
+    color: #333;
+    font-size: 1.45rem;
+    margin-bottom: 22px;
+    text-align: center;
+}
+
+.stage-card p {
+    color: #555;
+    line-height: 1.75;
+    font-size: 0.95rem;
+    text-align: justify;
+    margin-bottom: 18px;
+}
+
+.stage-card p:last-of-type {
+    margin-bottom: 0;
+}
+
+/* PASTILLES RÉSEAUX SOCIAUX */
+
+.social-pills {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: auto;
+    padding-top: 25px;
+}
+
+.social-pills a {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 158, 135, 0.12);
+    border: 1px solid rgba(255, 158, 135, 0.25);
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-pills a i {
+    font-size: 1.35rem;
+    color: #FF9E87;
+}
+
+.social-pills a:hover {
+    transform: translateY(-5px);
+    background: #FF9E87;
+}
+
+.social-pills a:hover i {
+    color: white;
+}
+
+/* GALERIE */
+
+.stage-gallery {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.gallery-placeholder {
+    height: 180px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.88);
+    border: 2px dashed rgba(255, 158, 135, 0.35);
+    color: #e08a74;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.04);
+}
+
+/* OUTILS */
+
+.page-stage .tools-container {
+    max-width: 950px;
+    margin: 0 auto 75px;
+}
+
+/* INSTAGRAM */
+
+.instagram-card {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    background: rgba(255,255,255,0.88);
+    backdrop-filter: blur(12px);
+    padding: 50px;
+    border-radius: 30px;
+    border: 2px solid white;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+}
+
+.instagram-card i {
+    font-size: 3rem;
+    color: #FF9E87;
+    margin-bottom: 20px;
+}
+
+.instagram-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.instagram-card p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* BILAN */
+
+.stage-bilan-clean {
+    max-width: 950px;
+    margin: 0 auto 90px;
+    padding: 45px;
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(12px);
+    border-radius: 30px;
+    border: 2px solid white;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 750px) {
+    .stage-company-card {
+        grid-template-columns: 1fr;
+        padding: 32px;
+    }
+
+    .stage-grid,
+    .stage-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .stage-card {
+        min-height: auto;
+    }
+
+    .stage-bilan-clean,
+    .instagram-card {
+        padding: 32px;
+    }
+
+    .stage-logo {
+        width: 240px;
+    }
+}
+
+/* CORRECTION FINALE - CARTES MISSIONS */
+
+.stage-missions {
+    max-width: 1050px !important;
+    margin: 0 auto 80px !important;
+}
+
+.stage-missions .stage-section-title {
+    margin-bottom: 40px !important;
+}
+
+.stage-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 30px !important;
+    max-width: 1050px !important;
+    margin: 0 auto !important;
+}
+
+.stage-card {
+    min-height: auto !important;
+    padding: 35px !important;
+    border-radius: 28px !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    border: 2px solid white !important;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.06) !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+
+    text-align: left !important;
+}
+
+.stage-card i {
+    font-size: 2rem !important;
+    color: #FF9E87 !important;
+    margin-bottom: 18px !important;
+    text-align: center !important;
+}
+
+.stage-card h3 {
+    font-family: 'Playfair Display', serif !important;
+    font-size: 1.45rem !important;
+    color: #333 !important;
+    text-align: center !important;
+    margin-bottom: 20px !important;
+}
+
+.stage-card p {
+    font-size: 0.95rem !important;
+    line-height: 1.7 !important;
+    color: #555 !important;
+    text-align: left !important;
+    margin-bottom: 16px !important;
+}
+
+.social-pills {
+    margin-top: 20px !important;
+    display: flex !important;
+    justify-content: center !important;
+    gap: 14px !important;
+    flex-wrap: wrap !important;
+}
+
+.social-pills a {
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 50% !important;
+    background: rgba(255, 158, 135, 0.12) !important;
+    border: 1px solid rgba(255, 158, 135, 0.25) !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+}
+
+.social-pills a i {
+    font-size: 1.3rem !important;
+    color: #FF9E87 !important;
+}
+
+.social-pills a:hover {
+    background: #FF9E87 !important;
+    transform: translateY(-4px) !important;
+}
+
+.social-pills a:hover i {
+    color: white !important;
+}
+
+@media (max-width: 750px) {
+    .stage-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+.instagram-card .social-pills {
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.instagram-card .social-pills a {
+    width: 60px;
+    height: 60px;
+}
+
+.instagram-card .social-pills a i {
+    font-size: 1.6rem;
+}
+
+/* RÉSULTATS */
+
+.impact-stats {
+    max-width: 1050px;
+    margin: 35px auto 70px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.impact-box {
+    background: rgba(255,255,255,0.88);
+    backdrop-filter: blur(12px);
+
+    border-radius: 25px;
+    border: 2px solid white;
+
+    padding: 35px 25px;
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    transition: all 0.3s ease;
+}
+
+.impact-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(255,158,135,0.2);
+}
+
+.impact-number {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #FF9E87;
+    margin-bottom: 10px;
+}
+
+.impact-box p {
+    color: #555;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+@media (max-width: 850px) {
+    .impact-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .impact-stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================
+   GALERIE DES CRÉATIONS - PAGE STAGE
+   ========================================= */
+
+.creation-gallery {
+    max-width: 1050px;
+    margin: 40px auto 80px;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 22px;
+}
+
+.creation-item {
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-radius: 25px;
+    padding: 20px 16px;
+
+    text-align: center;
+    border: 2px solid white;
+
+    box-shadow: 0 10px 28px rgba(0,0,0,0.06);
+    transition: all 0.3s ease;
+}
+
+.creation-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 38px rgba(255, 158, 135, 0.22);
+}
+
+.creation-item img {
+    width: 100%;
+    height: 150px;
+
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+
+    transition: transform 0.3s ease;
+}
+
+.creation-item:hover img {
+    transform: scale(1.06);
+}
+
+.creation-item h4 {
+    margin-top: 15px;
+
+    color: #444;
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* Responsive */
+
+@media (max-width: 1050px) {
+    .creation-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .creation-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .creation-item img {
+        height: 160px;
+    }
+}
+
+@media (max-width: 450px) {
+    .creation-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .creation-item img {
+        height: 190px;
+    }
+}
+
+.stage-spacer-small {
+    height: 35px;
+}
+
+/* REMERCIEMENTS - PAGE STAGE */
+
+.stage-thanks-card {
+    max-width: 950px;
+    margin: 0 auto 90px;
+    padding: 45px;
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(12px);
+    border-radius: 30px;
+    border: 2px solid white;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+}
+
+.stage-thanks-card h2 {
+    font-family: 'Playfair Display', serif;
+    color: #FF9E87;
+    font-size: 1.9rem;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.stage-thanks-card p {
+    color: #555;
+    line-height: 1.8;
+    font-size: 1rem;
+    text-align: justify;
+    margin-bottom: 18px;
+}
+
+.stage-thanks-card p:last-child {
+    margin-bottom: 0;
+}
+
+/* =========================================
+   CHIFFRES ENTREPRISE - PAGE STAGE
+   ========================================= */
+
+.company-stats {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 950px) {
+    .company-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .company-stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================================
+   INFOGRAPHIE STAGE - À ACTIVER PLUS TARD
+   ========================================= */
+
+.stage-infographie-card {
+    max-width: 950px;
+    margin: 40px auto 80px;
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(12px);
+    border-radius: 30px;
+    padding: 25px;
+    border: 2px solid white;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+    text-align: center;
+}
+
+.stage-infographie-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    display: block;
+}
+
+
+/* =========================================
+   MES RÉALISATIONS EN IMAGES - PAGE STAGE
+   ========================================= */
+
+.stage-real-gallery {
+    max-width: 1050px;
+    margin: 45px auto 90px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+.stage-real-item {
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(12px);
+    border-radius: 28px;
+    padding: 18px;
+    border: 2px solid white;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.stage-real-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(255, 158, 135, 0.22);
+}
+
+.stage-real-item img {
+    width: 100%;
+    height: 300px;
+    border-radius: 22px;
+    display: block;
+    margin-bottom: 18px;
+}
+
+/* Photo atelier */
+.stage-real-item img.atelier-photo {
+    object-fit: cover;
+    object-position: center center;
+}
+
+/* Photo light box : on évite qu’elle soit coupée */
+.stage-real-item img.lightbox-photo {
+    object-fit: contain;
+    object-position: center center;
+    background: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Photo organisation des pièces */
+.stage-real-item img.organisation-photo {
+    object-fit: cover;
+    object-position: center center;
+}
+
+/* Photo poste de travail */
+.stage-real-item img.poste-photo {
+    object-fit: cover;
+    object-position: center center;
+}
+
+.stage-real-item h4 {
+    color: #444;
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0;
+}
+
+@media (max-width: 750px) {
+    .stage-real-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .stage-real-item img {
+        height: 260px;
+    }
+}
+
+
+/* =========================================
+   CARTE CHIFFRE D'AFFAIRES - PAGE STAGE
+   ========================================= */
+
+.ca-highlight-card {
+    max-width: 900px;
+    margin: 45px auto 90px;
+    padding: 45px 35px;
+    border-radius: 35px;
+    background: rgba(255, 255, 255, 0.92);
+    border: 2px solid white;
+    box-shadow: 0 18px 45px rgba(255, 158, 135, 0.22);
+    text-align: center;
+}
+
+.ca-label {
+    color: #777;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.ca-number {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #FF9E87;
+    margin-bottom: 18px;
+}
+
+.ca-text {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #444;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+@media (max-width: 700px) {
+    .ca-highlight-card {
+        padding: 35px 25px;
+    }
+
+    .ca-number {
+        font-size: 3rem;
+    }
+
+    .ca-text {
+        font-size: 0.98rem;
+    }
+}
+
+/* =========================================
+   INFOGRAPHIE STAGE - PAGE STAGE
+   ========================================= */
+
+.stage-infographie-card {
+    max-width: 780px;
+    margin: 45px auto 90px;
+    padding: 22px;
+    border-radius: 35px;
+    background: rgba(255, 255, 255, 0.92);
+    border: 2px solid white;
+    box-shadow: 0 18px 45px rgba(255, 158, 135, 0.20);
+    text-align: center;
+}
+
+.stage-infographie-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 24px;
+}
+
+@media (max-width: 750px) {
+    .stage-infographie-card {
+        padding: 14px;
+        border-radius: 26px;
+        margin: 35px auto 70px;
+    }
+
+    .stage-infographie-card img {
+        border-radius: 18px;
+    }
+}
+
+/* =========================================
+   BOUTON LIEN PAGE WORDPRESS - PAGE STAGE
+   ========================================= */
+
+.stage-link-button {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 12px 22px;
+    border-radius: 30px;
+    background: rgba(255, 158, 135, 0.16);
+    color: #FF8A70;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1.5px solid rgba(255, 158, 135, 0.35);
+    transition: all 0.3s ease;
+}
+
+.stage-link-button:hover {
+    background: #FF9E87;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 158, 135, 0.28);
+}
+
+
+/* =========================================
+   APERÇU METRICOOL - PAGE STAGE
+   ========================================= */
+
+.metricool-section {
+    max-width: 1050px;
+    margin: 45px auto 90px;
+    display: grid;
+    grid-template-columns: 0.8fr 1.4fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.metricool-text {
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid white;
+    border-radius: 30px;
+    padding: 35px 28px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+    text-align: center;
+}
+
+.metricool-number {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 3.3rem;
+    font-weight: 700;
+    color: #FF9E87;
+    margin-bottom: 15px;
+}
+
+.metricool-text p {
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.metricool-capture {
+    background: rgba(255, 255, 255, 0.92);
+    border: 2px solid white;
+    border-radius: 30px;
+    padding: 18px;
+    box-shadow: 0 15px 35px rgba(255, 158, 135, 0.16);
+}
+
+.metricool-capture img {
+    width: 100%;
+    display: block;
+    border-radius: 22px;
+}
+
+@media (max-width: 900px) {
+    .metricool-section {
+        grid-template-columns: 1fr;
+    }
+
+    .metricool-number {
+        font-size: 2.8rem;
+    }
+}
